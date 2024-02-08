@@ -1,7 +1,6 @@
-import { View, Text } from 'react-native';
 import { CATEGORIES } from '../data/dummy-data';
 import React from 'react';
-import { FlatList } from 'react-native-web';
+import { FlatList } from 'react-native';
 import CategoryGridTile from '../components/CategoryGridTile';
 
 const renderCategoryItem = (itemData) => {
@@ -16,6 +15,7 @@ const CategoriesScreen = () => {
       data={CATEGORIES}
       keyExtractor={(item) => item.id}
       renderItem={renderCategoryItem}
+      numColumns={2}
     />
   );
 };
